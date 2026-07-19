@@ -1,69 +1,60 @@
-Task Management System
+# Task Management System
 
-A Laravel-based task management system with authentication, real-time interactivity, project/task CRUD, AJAX task updates, filters, search, and a user activity log for developer testing.
+A Laravel-based task management system featuring authentication, real-time interactivity, project/task CRUD, asynchronous task updates, multi-criteria filtering, search capabilities, and an integrated user activity log optimized for developer testing.
 
-## Features
-- Project and Task CRUD
-- AJAX-based updates
-- User Activity Log
-- Search & Filter Tasks
-- Task Completion Tracker
+---
 
-**** Setup Instructions****
+### 🚀 Core Features
 
-1. Clone Repository
-   ->git clone https://github.com/niralivachhani26/laravel-task-manager.git
-   ->cd laravel-task-manager
+*   **Project & Task CRUD:** Complete create, read, update, and delete actions with relational consistency between items.
+*   **AJAX-Based Updates:** Dynamic, page-refresh-free status updates for seamless workflows.
+*   **User Activity Log:** Automated tracking that registers user behavior for accountability.
+*   **Advanced Search & Filters:** High-performance filtering tools to isolate tasks rapidly.
+*   **Task Completion Tracker:** Visual layout to monitor ongoing project progression.
 
-2. Install Dependency using cmd
-   ->composer install
-   ->npm install
-   ->npm run dev
+---
 
-3. Environment Setup
-   ->cp .env.example .env
-   ->php artisan key:generate
+### 🛠️ Tech Stack & Architecture
 
-4. Database Configuration
-   ->Update .env with your database credentials:
-	DB_DATABASE=task_manager
-	DB_USERNAME=root
-	DB_PASSWORD=
+| Layer | Technologies |
+| :--- | :--- |
+| **Backend Framework** | Laravel (PHP) |
+| **Frontend Architecture** | Blade, jQuery, Bootstrap, AJAX |
+| **Authentication Layer** | Laravel Breeze |
+| **Database Engine** | MySQL |
+| **Assets & Utilities** | FontAwesome Icons, Laravel Server-side Validation |
 
-5. Run Migrations and Seeders
-   ->php artisan migrate --seed
+---
 
-6. Run the Application
-   ->php artisan serve
+### 💻 Local Installation & Setup Instructions
 
+Follow these steps to deploy and execute the application environment locally:
 
-**** Demo Credentials****
+#### 1. Clone the Infrastructure
+```bash
+git clone [https://github.com/niralivachhani26/laravel-task-manager.git](https://github.com/niralivachhani26/laravel-task-manager.git)
+cd laravel-task-manager
 
-Use the following credentials to log into the demo account:
+# Install PHP backend dependencies
+composer install
 
-Email: vnirali261997@gmail.com
-password: admin123456
+# Install and compile frontend assets
+npm install
+npm run dev
 
+#Environment sync
+cp .env.example .env
+php artisan key:generate
 
-**** TechStack Used****
+#Database setup
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=task_manager
+DB_USERNAME=root
+DB_PASSWORD=
 
- ->Backend: Laravel (PHP)
+#Run Database Migrations & Seeders
+php artisan migrate --seed
 
- ->Frontend: Blade, jQuery, Bootstrap, AJAX
-
- ->Authentication: Laravel Breeze
-
- ->Database: MySQL
-
- ->Others:
-
-	Laravel Validation (backend)
-
-	FontAwesome (icons)
-
-
-**** Assumptions & Notes****
-
-  1. Only authenticated users can access the task management interface.
-  2. User activities like task creation, updates, and deletions are logged.
-  3. To update a task status, simply click on the task status badge/text; it will toggle between statuses instantly using AJAX.
+php artisan serve
